@@ -172,10 +172,13 @@ def craft_prompt(df_sample, profile, corr, MAX_ROWS=10, N_TOP_COLUMNS=10):
 
 ---
 
-## Example Files
-
+## Input File
 -  [Sample Input File: `voice.csv`](/voice.csv)
+
+## Output File
 -  [Generated EDA Report: `report1.md`](/report1.md)
+
+---
 
 ## This generates:
 

@@ -1,76 +1,88 @@
-📊 EDA-AI: Automated Exploratory Data Analysis with LLMs
-🧠 Overview
-EDA-AI is a command-line tool that automatically generates a clean, human-readable Exploratory Data Analysis (EDA) report for any CSV dataset — powered by large language models like Mistral via OpenRouter.
+# 📊 EDA-AI: Automated Exploratory Data Analysis with LLMs
 
-It’s designed for data professionals, business analysts, and product teams who need quick, insightful overviews of their data without manually coding EDA logic or writing reports.
+---
 
-🎯 Problem Statement
-How can we automate exploratory data analysis and make the results understandable to non-technical stakeholders using AI?
+## 🧠 Overview
 
-Performing EDA is time-consuming and often too technical for business users to interpret. This project solves that by:
+**EDA-AI** is a command-line tool that automatically generates a clean, human-readable Exploratory Data Analysis (EDA) report for any CSV dataset — powered by large language models like **Mistral** via **OpenRouter**.
 
-Extracting core statistics and visual patterns from the dataset
+It’s designed for **data professionals**, **business analysts**, and **product teams** who need quick, insightful overviews of their data without manually coding EDA logic or writing reports.
 
-Structuring a prompt to guide the LLM (e.g., Mistral) to generate a business-friendly Markdown report
+---
 
-Producing charts and summaries you can drop into presentations or dashboards
+## 🎯 Problem Statement
 
-🚀 What It Does
-📂 Load Data: Accepts any .csv file as input
+> **How can we automate exploratory data analysis and make the results understandable to non-technical stakeholders using AI?**
 
-📊 Profile Data: Computes descriptive stats, correlation, and sample views
+Performing EDA is time-consuming and often too technical for business users to interpret.
 
-📈 Generate Visuals: Saves key plots like histograms and heatmaps
+**EDA-AI** solves this by:
+- Extracting core statistics and visual patterns from the dataset
+- Structuring a prompt to guide the LLM (e.g., Mistral) to generate a business-friendly Markdown report
+- Producing charts and summaries you can drop into presentations or dashboards
 
-🧠 LLM-Powered Analysis: Crafts a detailed prompt and sends it to an AI model via OpenRouter
+---
 
-📝 Write Markdown Report: Outputs a clean, structured EDA report with insights and optional plots
+## 🚀 What It Does
 
-🧪 Example Use Case
-bash
-Copy code
+- 📂 **Load Data**: Accepts any `.csv` file as input  
+- 📊 **Profile Data**: Computes descriptive stats, correlation, and sample views  
+- 📈 **Generate Visuals**: Saves key plots like histograms and heatmaps  
+- 🧠 **LLM-Powered Analysis**: Crafts a detailed prompt and sends it to an AI model via OpenRouter  
+- 📝 **Write Markdown Report**: Outputs a clean, structured EDA report with insights and optional plots
+
+---
+
+## 🧪 Example Use Case
+
+```bash
 OPENROUTER_API_KEY=sk-or-... python eda_ai.py data/customer_data.csv -o report.md
-This generates:
+```
 
-report.md: A rich Markdown report ready for business review
+## This generates:
 
-/eda_plots/: Optional folder of charts (e.g., correlation heatmap)
+ - 📄 report.md: A rich Markdown report ready for business review
+ - 📁 eda_plots/: Optional folder of charts (e.g., correlation heatmap)
 
-📦 Output Highlights
-🔹 Executive Summary: Key trends, risks, and quick wins
+---
 
-🔹 Data Quality Table: Exact row counts and affected columns
+## 📦 Output Highlights:
+- Executive Summary: Key trends, risks, and quick wins
+- Data Quality Table: Exact row counts and affected columns
+- Univariate & Bivariate Analysis: Numeric, categorical, and time insights
+- Segment-Level Patterns: E.g., churn or spend by region or product
+- Feature Engineering Suggestions
+- Risk, Bias & Compliance Checks
+- Recommended Next Steps for modeling
 
-🔹 Univariate & Bivariate Analysis: Numeric, categorical, and time insights
+--- 
 
-🔹 Segment-Level Patterns: E.g., churn or spend by region or product
+## 🛠 Tech Stack:
+- Python
+- Pandas, Seaborn, Matplotlib
+- LLM via OpenRouter (mistralai/mistral-small-3.2)
+- Markdown output
+- Command-line interface
 
-🔹 Feature Engineering Suggestions
+---
 
-🔹 Risk, Bias & Compliance Checks
 
-🔹 Recommended Next Steps for modeling
-
-🛠 Tech Stack
-Python, Pandas, Seaborn, Matplotlib
-
-LLM via OpenRouter (e.g., mistralai/mistral-small-3.2)
-
-Markdown output
-
-Command-line interface
-
-🔐 Requirements
+## 🔐 Requirements:
 Python 3.8+
+.env file with OPENROUTER_API_KEY or set the key in your environment
 
-.env file or OPENROUTER_API_KEY set in environment
+---
 
-Dependencies: openai, pandas, matplotlib, seaborn, dotenv, tqdm
+## Python packages:
+- openai
+- pandas
+- matplotlib
+- seaborn
+- tqdm
+- python-dotenv
 
-💡 Ideal For
-Analysts looking to speed up EDA
-
-Data science teams preparing datasets for modeling
-
-Product managers or executives who want a quick, readable data summary
+## 💡 Ideal For:
+- Analysts looking to speed up EDA
+- Data science teams preparing datasets for modeling
+- Product managers or executives who want a quick, readable data summary
 

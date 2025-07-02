@@ -175,6 +175,35 @@ def craft_prompt(df_sample, profile, corr, MAX_ROWS=10, N_TOP_COLUMNS=10):
 ## Input File
 -  [Sample Input File: `voice.csv`](/voice.csv)
 
+---
+
+## How to Use
+#### Step 1: Install Dependencies
+```
+pip install -r requirements.txt
+Make sure you have Python 3.8+ and the following packages installed:
+openai, pandas, matplotlib, seaborn, tqdm, python-dotenv
+```
+
+#### Step 2: Set Your API Key
+ - Create a .env file in the project root and add:
+
+```
+OPENROUTER_API_KEY=sk-xxxxxx
+```
+
+ - Or export it in your terminal:
+```
+export OPENROUTER_API_KEY=sk-xxxxxx
+```
+
+#### Step 3: Run the Tool
+```
+python eda_ai.py path/to/your_file.csv -o report.md
+```
+
+--- 
+
 ## Output File
 -  [Generated EDA Report: `report1.md`](/report1.md)
 

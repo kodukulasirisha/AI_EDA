@@ -25,7 +25,7 @@ Performing EDA is time-consuming and often too technical for business users to i
 
 ##  What It Does
 
--  **Load Data**: Accepts any `.csv` file as input  
+-  **Load Data:** Accepts any `.csv` (or `.xlsx`, `.json`, `.parquet`) file as input
 -  **Profile Data**: Computes descriptive stats, correlation, and sample views  
 -  **Generate Visuals**: Saves key plots like histograms and heatmaps  
 -  **LLM-Powered Analysis**: Crafts a detailed prompt and sends it to an AI model via OpenRouter  
